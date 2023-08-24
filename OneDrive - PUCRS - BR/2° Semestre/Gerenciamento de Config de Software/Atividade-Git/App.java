@@ -9,7 +9,7 @@ public class App {
         int quant, count, quant2;
         int num;
 
-        System.out.println("Digite quantos elementos deseja adicionar no array: ");
+        System.out.println("Digite quantos elementos deseja adicionar no array l1: ");
         quant = in.nextInt();
 
         System.out.println("Digite os elementos que deseja inserir em l1:");
@@ -19,7 +19,7 @@ public class App {
         }
         System.out.println("Elementos inseridos em l1: " + l1);
 
-        System.out.println("Digite quantos elementos deseja adicionar no segundo array: ");
+        System.out.println("Digite quantos elementos deseja adicionar no array l2: ");
         quant2 = in.nextInt();
 
         System.out.println("Digite os elementos que deseja inserir em l2:");
@@ -36,7 +36,7 @@ public class App {
         System.out.println("A lista l1 tem elementos repetidos? " + hasRepeated);
 
         int cont = nroRepeat(l1);
-        System.out.println("Número de elementos repetidos: " + cont);
+        System.out.println("Número de elementos repetidos em l1: " + cont);
 
         ArrayList<Integer> intersection = intersect(l1, l2);
         System.out.println("Interseção: " + intersection);
@@ -46,7 +46,7 @@ public class App {
         int num;
         int count = 0;
 
-        System.out.println("Digite o elemento que deseja procurar: ");
+        System.out.println("Digite o elemento que deseja procurar em l1: ");
         num = in.nextInt();
 
         for (Integer elementoL1 : l1) {
