@@ -39,7 +39,7 @@ public class App {
         System.out.println("Número de elementos repetidos em l1: " + cont);
 
         ArrayList<Integer> intersection = intersect(l1, l2);
-        System.out.println("Interseção: " + intersection);
+        System.out.println("Interseção entre l1 e l2: " + intersection);
     }
 
     public static int nOcorrencias(ArrayList<Integer> l1) {
