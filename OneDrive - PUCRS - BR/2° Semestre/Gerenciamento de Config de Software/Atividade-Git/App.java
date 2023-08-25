@@ -38,6 +38,12 @@ public class App {
         int cont = nroRepeat(l1);
         System.out.println("Número de elementos repetidos em l1: " + cont);
 
+        ArrayList<Integer> repeatedList = listRepeat(l1);
+        System.out.println("Lista de elementos repetidos: " + repeatedList);
+
+        ArrayList<Integer> unionList = union(l1, l2);
+        System.out.println("União entre l1 e l2: "+ unionList);
+
         ArrayList<Integer> intersection = intersect(l1, l2);
         System.out.println("Interseção entre l1 e l2: " + intersection);
     }
@@ -86,6 +92,26 @@ public class App {
         }
 
         return totalRepeated;
+    }
+
+    public static ArrayList<Integer> listRepeat(ArrayList<Integer> l1){
+        HashSet<Integer> uniqueSet = new HashSet<>();
+        HashSet<Integer> repeatedSet = new HashSet<>();
+        ArrayList<Integer> repeatedList = new ArrayList<>();
+
+        for (Integer num : l1) {
+            if (!uniqueSet.add(num)) {
+                if (repeatedSet.add(num)) {
+                    repeatedList.add(num);
+                }
+            }
+        }
+        return repeatedList;
+    }
+    public static ArrayList<Integer> union(ArrayList<Integer> l1, ArrayList<Integer> l2) {
+        HashSet<Integer> unionSet = new HashSet<>(l1);
+        unionSet.addAll(l2);
+        return new ArrayList<>(unionSet);
     }
 
     public static ArrayList<Integer> intersect(ArrayList<Integer> l1, ArrayList<Integer> l2) {
